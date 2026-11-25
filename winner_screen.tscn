@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ne4hmv331gav"]
+
+[ext_resource type="Script" uid="uid://br3fwhm0hq3j2" path="res://scripts/winner_label.gd" id="1_1hha7"]
+
+[node name="Winner Screen" type="Node2D" unique_id=1467577487]
+
+[node name="Winner Label" type="Label" parent="." unique_id=1005819729]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 50
+script = ExtResource("1_1hha7")

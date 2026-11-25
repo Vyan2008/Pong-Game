@@ -1,16 +1,21 @@
 [gd_scene format=3 uid="uid://cux0qolvhwvk1"]
 
+[ext_resource type="Script" uid="uid://d1ktcj1glqsmf" path="res://scripts/game.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://dxtiucbaclp00" path="res://scripts/player_paddle.gd" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://kgxb7a7nxq5x" path="res://scripts/computer_paddle.gd" id="2_lnu2h"]
 [ext_resource type="Script" uid="uid://bxjjd8iqavgwj" path="res://scripts/ball.gd" id="3_lnu2h"]
+[ext_resource type="Script" uid="uid://dcdyplyij2e2x" path="res://scripts/label.gd" id="4_lbhrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kfvo"]
 size = Vector2(20, 40)
 
 [node name="Game" type="Node2D" unique_id=1045221358]
+script = ExtResource("1_iywne")
 
 [node name="Player Paddle" type="CharacterBody2D" parent="." unique_id=1992989010]
 unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_uwrxv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player Paddle" unique_id=810010406]
@@ -23,6 +28,8 @@ polygon = PackedVector2Array(-10, -20, -10, 20, 10, 20, 10, -20)
 
 [node name="Computer Paddle" type="CharacterBody2D" parent="." unique_id=1706673104]
 unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("2_lnu2h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer Paddle" unique_id=394535884]
@@ -35,6 +42,7 @@ polygon = PackedVector2Array(-10, -20, -10, 20, 10, 20, 10, -20)
 
 [node name="Ball" type="CharacterBody2D" parent="." unique_id=1967879786]
 unique_name_in_owner = true
+collision_mask = 2
 motion_mode = 1
 script = ExtResource("3_lnu2h")
 
@@ -45,3 +53,9 @@ polygon = PackedVector2Array(-5, -5, -5, 5, 5, 5, 5, -5)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ball" unique_id=286237755]
 position = Vector2(576, 324)
 polygon = PackedVector2Array(-5, -5, -5, 5, 5, 5, 5, -5)
+
+[node name="Score Label" type="Label" parent="." unique_id=2127805633]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 25
+script = ExtResource("4_lbhrr")
