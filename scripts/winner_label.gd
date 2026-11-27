@@ -10,8 +10,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (Global.playerWon == true):
-		text = "Player Wins! Press M for Menu."
+		text = "Player Wins!"
 		position = Vector2(576, 324) - size / 2
 	else:
-		text = "Computer Wins! Press M for Menu."
+		text = "Computer Wins!"
 		position = Vector2(576, 324) - size / 2
