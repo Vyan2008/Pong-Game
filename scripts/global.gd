@@ -7,9 +7,10 @@ var computerScore = 0
 var speed = 300
 var playerWon = false
 
-@onready var computerPaddle = %"Computer Paddle"
-@onready var playerPaddle = %"Player Paddle"
-@onready var ball = %Ball
+# declares and intializes several variables,
+# such as playerScore and speed, which need to be global
+# so that they can be accessed by the attached scripts of 
+# all objects.
 
 func _process(delta: float) -> void:
 	if (Global.playerScore == 10 || Global.computerScore == 10):
@@ -19,4 +20,7 @@ func _process(delta: float) -> void:
 		Global.playerScore = 0
 		Global.computerScore = 0
 		get_tree().change_scene_to_file("res://scenes/winner_screen.tscn")
+	# ends the game if there is a winner, resets the scores,
+	# and uses the playerWon boolean variable to store the 
+	# winner. 
 		
