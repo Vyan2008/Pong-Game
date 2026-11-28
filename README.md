@@ -12,10 +12,15 @@ Before trying to run the project, you first need to install Godot 4.7.2 for your
 You also need to ensure that you have Git installed.
 
 In your terminal, run the following lines of code:
+
 cd ~/Preferred_Path
+
 such as cd~/Desktop
+
 mkdir “Working Pong Game”
+
 cd “Working Pong Game”
+
 git clone https://github.com/Vyan2008/Pong-Game
 
 In Godot, select Import, then navigate to the “Working Pong Game” folder you just created. Open the folder and select “Pong-Game” as the imported Github folder. After the project opens, click the play button on the top right of the screen to run the game. Close the running window and click the play button again to rerun the game. 
@@ -35,5 +40,3 @@ The main scene the project uses, the game scene, contains the player paddle, com
 [ ] The addition of an easy, medium, hard, and hardcore difficulty, where each difficulty has larger ball speed increases and a shorter delay for the opposing paddle
 [ ] Random ball speed mode where every time the ball is hit it has a random speed
 [ ] A mode where the user controls reverse every time they hit the ball
-
-
