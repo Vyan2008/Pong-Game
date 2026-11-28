@@ -40,3 +40,6 @@ The main scene the project uses, the game scene, contains the player paddle, com
 [ ] The addition of an easy, medium, hard, and hardcore difficulty, where each difficulty has larger ball speed increases and a shorter delay for the opposing paddle
 [ ] Random ball speed mode where every time the ball is hit it has a random speed
 [ ] A mode where the user controls reverse every time they hit the ball
+
+# Flowchart
+<img width="852" height="952" alt="Pong Flowchart Finished MVP drawio" src="https://github.com/user-attachments/assets/4bbe9afa-7648-45c3-82e0-4149392e190d" />
